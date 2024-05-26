@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CreditCardAdmin';
+  sidebarOpen = true;
+  
+  toggleSidebar(){
+    this.sidebarOpen = this.sidebarOpen? false: true;
+  }
 }
