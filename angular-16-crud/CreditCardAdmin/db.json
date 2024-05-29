@@ -134,6 +134,20 @@
       "numberOfApplications": 40,
       "createdDate": "28-08-2023",
       "termsAndConditions": "The following conditions are applicable for this card"
+    },
+    {
+      "id": "e1b5",
+      "name": "Platinum Card",
+      "description": "This is a test credit card",
+      "bankName": "ARC Bank",
+      "maxCredit": 5000,
+      "interestRate": 12,
+      "active": true,
+      "recommendedScore": "100-500",
+      "annualFee": 12,
+      "termsAndConditions": "terms and conditions for the credit card",
+      "createdDate": "2024-05-12T21:00:00.000Z",
+      "updateDate": "2024-05-14T21:00:00.000Z"
     }
   ]
 }
