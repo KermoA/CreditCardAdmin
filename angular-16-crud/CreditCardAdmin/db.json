@@ -61,21 +61,6 @@
       "termsAndConditions": "The following conditions are applicable for this card"
     },
     {
-      "id": "6",
-      "name": "Bank of America - Platinum Card",
-      "bankName": "Bank of America",
-      "description": "Bank of America offers customers with variety of options",
-      "maxCredit": 8000,
-      "active": true,
-      "annualFee": 0,
-      "interestRate": 13.5,
-      "introOffer": 200,
-      "recommendedScore": "600-800",
-      "numberOfApplications": 40,
-      "createdDate": "28-08-2023",
-      "termsAndConditions": "The following conditions are applicable for this card"
-    },
-    {
       "id": "7",
       "name": "Bank of America - Platinum Card",
       "bankName": "Bank of America",
@@ -92,36 +77,6 @@
     },
     {
       "id": "8",
-      "name": "Bank of America - Platinum Card",
-      "bankName": "Bank of America",
-      "description": "Bank of America offers customers with variety of options",
-      "maxCredit": 8000,
-      "active": true,
-      "annualFee": 0,
-      "interestRate": 13.5,
-      "introOffer": 200,
-      "recommendedScore": "600-800",
-      "numberOfApplications": 40,
-      "createdDate": "28-08-2023",
-      "termsAndConditions": "The following conditions are applicable for this card"
-    },
-    {
-      "id": "9",
-      "name": "Bank of America - Platinum Card",
-      "bankName": "Bank of America",
-      "description": "Bank of America offers customers with variety of options",
-      "maxCredit": 8000,
-      "active": true,
-      "annualFee": 0,
-      "interestRate": 13.5,
-      "introOffer": 200,
-      "recommendedScore": "600-800",
-      "numberOfApplications": 40,
-      "createdDate": "28-08-2023",
-      "termsAndConditions": "The following conditions are applicable for this card"
-    },
-    {
-      "id": "10",
       "name": "Bank of America - Platinum Card",
       "bankName": "Bank of America",
       "description": "Bank of America offers customers with variety of options",

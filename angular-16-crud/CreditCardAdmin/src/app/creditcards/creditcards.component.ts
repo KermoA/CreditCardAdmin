@@ -15,21 +15,25 @@ export class CreditcardsComponent {
 
   creditcards: CreditCard[] = [];
 
-  constructor(private creditcardsService: CreditcardsService) {
-    this.creditcardsService.getCreditCards().subscribe((data: CreditCard[]) => {
+  creditCardMaximumAmount: number = 0;
+  creditCardMaximumInterest: number = 0;
+
+  constructor(private creditCardsService: CreditcardsService) {
+    this.creditCardsService.getCreditCards().subscribe((data:CreditCard[]) => {
       this.creditcards = data;
 
       this.dataSource = new MatTableDataSource(this.creditcards);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
 
-    }) 
+      this.calculateMetrics();
+
+    })
   }
 
   dataSource = new MatTableDataSource(this.creditcards);
 
-  displayColumns = ["select", "id", "name", "description", "bankName", "maxCredit", 
-  "interestRate", "active", "recommendedScore", "actions"]
+  displayColumns = ["select", "id", "name", "description", "bankName", "maxCredit", "interestRate", "active", "recommendedScore", "actions"];
 
   selection = new SelectionModel(true, []);
 
@@ -40,4 +44,8 @@ export class CreditcardsComponent {
     this.selection.toggle(row as never);
   }
 
+  calculateMetrics(){
+    this.creditCardMaximumAmount = this.creditcards.filter(card => card.maxCredit > 3000).length;
+    
+  }
 }
