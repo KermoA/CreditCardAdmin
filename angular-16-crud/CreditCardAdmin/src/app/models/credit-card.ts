@@ -10,5 +10,5 @@ export interface CreditCard {
     annualFee: number;
     termsAndConditions: string;
     createdDate: string;
-    updateDate: string;
+    updatedDate: string;
 }

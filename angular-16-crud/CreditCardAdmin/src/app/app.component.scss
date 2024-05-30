@@ -11,11 +11,14 @@
   }
   .content-container {
     height: 100%;
-    border: 1px solid #ddd;
     min-height: 100vh;
+    background-image: url(creditcards/images/bg.jpg);
   }
   .sidebar {
-    background-color: #f5f5f5;
+    background-image: url(creditcards/images/bg.jpg);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.02);
+    border: #3C4852;
     height: 100%;
     width: 250px;
   }

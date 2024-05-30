@@ -7,11 +7,18 @@
     padding: 5px;
 }
 .half-width {
-    width: 40%;
+    width: 48.5%;
+    margin: 0px 10px 0px 10px;
 }
-.half-width:last-child {
-    margin-left: 20px;
+.three-in-row {
+    width: 31.82%;
+    margin: 0px 10px 0px 10px;
 }
-.full-width {
-    width: 40%;
+.mat-card {
+    margin: 20px;
+    width: 75%;
+}
+.submit {
+    margin: 0px 10px 0px 10px;
+    align-items: end;
 }

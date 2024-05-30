@@ -30,7 +30,7 @@ export class AddComponent {
     annualFee: 12,
     termsAndConditions: "terms and conditions for the credit card",
     createdDate: Date(),
-    updateDate: Date()
+    updatedDate: Date()
   }
 
   saveCreditCard(){
