@@ -1,6 +1,6 @@
-<mat-card>
+<mat-card class="mat-card">
     <mat-card-header>
-        <mat-card-title>Edit Credit Card</mat-card-title>
+        <mat-card-title style="color: aliceblue; margin-left: 10px;">Edit Credit Card</mat-card-title>
     </mat-card-header>
     <mat-card-content>
         <form [formGroup]="editCreditCardForm" (ngSubmit)="onSubmit()">
@@ -8,32 +8,33 @@
             <div class="form-group">
                 <mat-form-field class="half-width">
                     <label>Credit Card Name</label>
-                    <input matInput placeholder="Credit Card Name" formControlName="name">
+                    <input matInput placeholder="Enter New Credit Card Name" formControlName="name">
                     <mat-error *ngIf="editCreditCardForm.get('name')?.hasError('required')">Name is required</mat-error>
                     <mat-error *ngIf="editCreditCardForm.get('name')?.hasError('minLength')">Name min length is 3</mat-error>
                     <mat-error *ngIf="editCreditCardForm.get('name')?.hasError('maxLength')">Name max length is 20</mat-error>
                 </mat-form-field>
-            </div>
 
-            <div class="form-group">
                 <mat-form-field class="half-width">
                     <label>Description</label>
-                    <input matInput placeholder="Credit Card Name" formControlName="description">
+                    <input matInput placeholder="Enter New Description" formControlName="description">
                     <mat-error *ngIf="editCreditCardForm.get('description')?.hasError('required')">Description is required</mat-error>
                 </mat-form-field>
             </div>
 
             <div class="form-group">
-                <mat-form-field class="half-width">
+                <mat-form-field class="three-in-row">
                     <label>Max Credit</label>
-                    <input matInput placeholder="Credit Card Name" formControlName="maxCredit">
+                    <input matInput placeholder="Enter New Max Credit" formControlName="maxCredit">
                 </mat-form-field>
-            </div>
 
-            <div class="form-group">
-                <mat-form-field class="half-width">
+                <mat-form-field class="three-in-row">
                     <label>Interest Rate</label>
-                    <input matInput placeholder="Credit Card Name" formControlName="interestRate">
+                    <input matInput placeholder="Enter New Interest Rate" formControlName="interestRate">
+                </mat-form-field>
+
+                <mat-form-field class="three-in-row">
+                    <label>Annual Fee</label>
+                    <input matInput placeholder="Enter New Annual Fee" formControlName="annualFee">
                 </mat-form-field>
             </div>
 
@@ -48,15 +49,9 @@
                 </mat-form-field>
             </div>
 
-
-            <div class="form-group">
-                <mat-form-field class="half-width">
-                    <label>Annual Fee</label>
-                    <input matInput placeholder="Credit Card Name" formControlName="annualFee">
-                </mat-form-field>
+            <div class="form-group align-end">
+                <button  mat-raised-button color="primary" type="submit" [disabled]="!editCreditCardForm.valid">Edit Credit Card</button>
             </div>
-
-            <button mat-raised-button color="primary" type="submit" [disabled]="!editCreditCardForm.valid">Edit Credit Card</button>
 
         </form>
 

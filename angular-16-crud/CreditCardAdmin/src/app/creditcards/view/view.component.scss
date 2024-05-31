@@ -1,3 +1,50 @@
-.mat-card {
-    margin: 20px;
-}
+.credit-card {
+    margin: 40px;
+    width: 520.5px;
+    height: 325.5px;
+    border-radius: 10px;
+    background-image: url(images/bg.jpg);
+    color: aliceblue;
+    backdrop-filter: blur(1px);
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .card-info {
+    padding: 16px;
+    font-size: 18px;
+  }
+  
+  .card-detail {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  
+  .mat-card-header {
+    padding: 10px 18px;
+    background-image: url(images/bg.jpg);
+    color: aliceblue;
+    backdrop-filter: blur(1px);
+    background: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: aqua;
+  }
+  
+  .mat-card-subtitle {
+    font-size: 20px;
+    color: black;
+  }
+  .card-detail.active {
+    color: blue;
+  }
+  
+  .card-detail.inactive {
+    color: red;
+  }
+  

@@ -1,5 +1,7 @@
 
 .count-card {
+    display: flex;
+    flex-direction: column;
     width: 25%;
     margin-right: 15px;
     padding: 20px;
@@ -7,20 +9,63 @@
 .count-card:last-child {
     margin-right: 0;
 }
+.bottom-center {
+    margin-top: auto;
+    text-align: center;
+    font-size: xx-large;
+    color: aqua;
+}
+.small-card {
+    margin: 20px;
+}
 .bg-success {
-    background-color: lightgreen;
+    background-image: url(add/images/bg.jpg);
+    backdrop-filter: blur(1px);
+    background: rgba(255, 255, 255, 0.08);
+    color: aliceblue;
+    text-align: center;
 }
 .bg-warning {
-    background-color: lightcoral;
+    background-image: url(add/images/bg.jpg);
+    backdrop-filter: blur(1px);
+    background: rgba(255, 255, 255, 0.1);
+    color: aliceblue;
+    text-align: center;
 }
 .bg-info {
-    background-color: lightblue;
+    background-image: url(add/images/bg.jpg);
+    backdrop-filter: blur(1px);
+    background: rgba(255, 255, 255, 0.12);
+    color: aliceblue;
+    text-align: center;
 }
 .bg-primary {
-    background-color: lightyellow;
+    background-image: url(add/images/bg.jpg);
+    backdrop-filter: blur(1px);
+    background: rgba(255, 255, 255, 0.14);
+    color: aliceblue;
+    text-align: center;
 }
 .mat-card {
     margin: 20px;
+    background-image: url(add/images/bg.jpg);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+.mat-card-list {
+    margin: 20px;
+    background-image: url(add/images/bg.jpg);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.007);
+    color: aliceblue;
+}
+.bg {
+    background-image: url(add/images/bg.jpg);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.001);
+    color: aliceblue;
+
+    
 }
 .icon-link {
     margin-right: 10px;
@@ -28,4 +73,20 @@
   
   .icon-link:last-child {
     margin-right: 0;
+  }
+  ::ng-deep .mat-select-value {
+    color: #005999;
+      font-weight: bold;
+      font-size: 15px;
+  }
+  ::ng-deep .mat-select-arrow {
+      color: #005999;
+  }
+  ::ng-deep .mat-option{
+    padding: 0!important;
+  
+  }
+  ::ng-deep .mat-option-text {
+  
+      text-align: right;
   }

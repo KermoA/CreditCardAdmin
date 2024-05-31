@@ -1,72 +1,72 @@
 <div>
-<div class="mat-card" style="display:flex; flex-direction: row;">
+<div class="small-card" style="display:flex; flex-direction: row;">
     <mat-card class="count-card bg-success">
         <mat-card-title>Num of Cards with Max Credit over 3000</mat-card-title>
-        <mat-card-content>{{creditCardMaximumAmount}}</mat-card-content>
+        <mat-card-content class="bottom-center">{{creditCardMaximumAmount}}</mat-card-content>
     </mat-card>
 
     <mat-card class="count-card bg-warning">
-        <mat-card-title>Num of Cards</mat-card-title>
-        <mat-card-content>10</mat-card-content>
+        <mat-card-title>Num of Cards With Interest Rate under 11.5</mat-card-title>
+        <mat-card-content class="bottom-center">{{creditCardMaximumInterest}}</mat-card-content>
     </mat-card>
     
         <mat-card class="count-card bg-info">
-            <mat-card-title>Num of Cards</mat-card-title>
-            <mat-card-content>10</mat-card-content>
+            <mat-card-title>Num of Cards With Active status true</mat-card-title>
+            <mat-card-content class="bottom-center">{{creditCardActive}}</mat-card-content>
         </mat-card>
     
         <mat-card class="count-card bg-primary">
-            <mat-card-title>Num of Cards</mat-card-title>
-            <mat-card-content>10</mat-card-content>
+            <mat-card-title style="margin-bottom: 20px;">Num of Cards with Recommended Score 500-700</mat-card-title>
+            <mat-card-content class="bottom-center">{{creditCardReccomendedScore}}</mat-card-content>
         </mat-card>
     </div>
 
-<mat-card class="mat-card">
+<mat-card class="mat-card-list">
     <mat-card-header>
         <mat-card-title>Listing All Credit Cards</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <table mat-table [dataSource]="dataSource" matSort >
+        <table class="bg" mat-table [dataSource]="dataSource" matSort >
             <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef></th>
                 <td mat-cell *matCellDef="let row">
                     <mat-checkbox></mat-checkbox>
                 </td>
             </ng-container>
-            <ng-container matColumnDef="id">
-                <th mat-header-cell *matHeaderCellDef>Id</th>
-                <td mat-cell *matCellDef="let element">{{element.id}}</td>
+            <ng-container matColumnDef="id" >
+                <th mat-header-cell *matHeaderCellDef style="color: antiquewhite;">Id</th>
+                <td mat-cell *matCellDef="let element" style="color: aliceblue;">{{element.id}}</td>
             </ng-container>
             <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef>Name</th>
-                <td mat-cell *matCellDef="let element">{{element.name}}</td>
+                <th mat-header-cell *matHeaderCellDef style="color: antiquewhite;">Card Name</th>
+                <td mat-cell *matCellDef="let element" style="color: aliceblue;">{{element.name}}</td>
             </ng-container>
             <ng-container matColumnDef="description">
-                <th mat-header-cell *matHeaderCellDef>Description</th>
-                <td mat-cell *matCellDef="let element">{{element.description}}</td>
+                <th mat-header-cell *matHeaderCellDef style="color: antiquewhite;">Description</th>
+                <td mat-cell *matCellDef="let element" style="color: aliceblue;">{{element.description}}</td>
             </ng-container>
             <ng-container matColumnDef="bankName">
-                <th mat-header-cell *matHeaderCellDef>Bank Name</th>
-                <td mat-cell *matCellDef="let element">{{element.bankName}}</td>
+                <th mat-header-cell *matHeaderCellDef style="color: antiquewhite;">Bank Name</th>
+                <td mat-cell *matCellDef="let element" style="color: aliceblue;">{{element.bankName}}</td>
             </ng-container>
             <ng-container matColumnDef="maxCredit">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Max Credit</th>
-                <td mat-cell *matCellDef="let element">{{element.maxCredit}}</td>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header style="color: antiquewhite;">Max Credit</th>
+                <td  mat-cell *matCellDef="let element" style="text-align: center;" style="color: aliceblue;">{{element.maxCredit}}</td>
             </ng-container>
             <ng-container matColumnDef="interestRate">
-                <th mat-header-cell *matHeaderCellDef>Interest Rate</th>
-                <td mat-cell *matCellDef="let element">{{element.interestRate}}</td>
+                <th mat-header-cell *matHeaderCellDef style="color: antiquewhite;">Interest Rate</th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;" style="color: aliceblue;">{{element.interestRate}} %</td>
             </ng-container>
             <ng-container matColumnDef="active">
-                <th mat-header-cell *matHeaderCellDef>Active</th>
-                <td mat-cell *matCellDef="let element">{{element.active}}</td>
+                <th mat-header-cell *matHeaderCellDef style="color: antiquewhite;">Active</th>
+                <td mat-cell *matCellDef="let element" style="color: aliceblue;">{{element.active}}</td>
             </ng-container>
             <ng-container matColumnDef="recommendedScore">
-                <th mat-header-cell *matHeaderCellDef>Recommended Score</th>
-                <td mat-cell *matCellDef="let element">{{element.recommendedScore}}</td>
+                <th mat-header-cell *matHeaderCellDef style="color: antiquewhite;">Recommended Score</th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;" style="color: aliceblue;">{{element.recommendedScore}}</td>
             </ng-container>
             <ng-container matColumnDef="actions">
-                <th mat-header-cell *matHeaderCellDef>Actions</th>
+                <th mat-header-cell *matHeaderCellDef style="color: antiquewhite;">Actions</th>
                 <td mat-cell *matCellDef="let element">
                     <a [routerLink]="['view', element.id]" class="icon-link"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="visibility" style="color: green;"></mat-icon></a>
                     <a [routerLink]="['edit', element.id]" class="icon-link"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" style="color: black;"></mat-icon> </a> 
@@ -77,7 +77,7 @@
             <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
         </table>
-        <mat-paginator [pageSizeOptions]="[5, 10, 15,20]"
+        <mat-paginator class="bg" [pageSizeOptions]="[5, 10, 15,20]"
         showFirstLastButtons></mat-paginator>
     </mat-card-content>
 </mat-card>
