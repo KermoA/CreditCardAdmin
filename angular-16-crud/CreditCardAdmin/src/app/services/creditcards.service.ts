@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CreditCard } from '../models/credit-card';
-import { Observable } from 'rxjs';
+import { map, mergeMap, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,22 @@ export class CreditcardsService {
 
   // Create New Credit Card
   createCreditCard(creditCard: CreditCard): Observable<CreditCard> {
-    return this.httpClient.post<CreditCard>(this.apiUrl, creditCard);
+    return this.getLastCreditCardId().pipe(
+      mergeMap(lastId => {
+        const nextId = (parseInt(lastId.toString(), 10) + 1).toString();
+        creditCard.id = nextId;
+        return this.httpClient.post<CreditCard>(this.apiUrl, creditCard);
+      })
+    );
+  }
+
+  // Get Last Credit Card ID
+  getLastCreditCardId(): Observable<number> {
+    return this.httpClient.get<CreditCard[]>(this.apiUrl).pipe(
+      map(creditCards => {
+        return creditCards.reduce((maxId, card) => Math.max(maxId, parseInt(card.id ?? '0', 10)), 0);
+      })
+    );
   }
 
   // Get All Credit Cards

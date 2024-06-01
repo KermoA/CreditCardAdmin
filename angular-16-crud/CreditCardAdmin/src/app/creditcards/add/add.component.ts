@@ -19,7 +19,7 @@ export class AddComponent {
   }
 
   newCreditCard: CreditCard = {
-    id: undefined,
+    id: "",
     name: "",
     description: "",
     bankName: "",

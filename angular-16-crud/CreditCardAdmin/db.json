@@ -223,48 +223,6 @@
       "termsAndConditions": "Terms and conditions apply",
       "createdDate": "2023-10-11",
       "updatedDate": "2023-10-11"
-    },
-    {
-      "id": "17",
-      "name": "UBS",
-      "description": "UBS offers premium benefits and services",
-      "bankName": "UBS",
-      "maxCredit": 10000,
-      "interestRate": 19,
-      "active": false,
-      "recommendedScore": "800-900",
-      "annualFee": 10,
-      "termsAndConditions": "Terms and conditions apply",
-      "createdDate": "2023-15-11",
-      "updatedDate": "2023-15-11"
-    },
-    {
-      "id": "18",
-      "name": "Deutsche Bank",
-      "description": "Deutsche Bank provides comprehensive rewards",
-      "bankName": "Deutsche Bank",
-      "maxCredit": 7000,
-      "interestRate": 14,
-      "active": true,
-      "recommendedScore": "700-850",
-      "annualFee": 7,
-      "termsAndConditions": "Terms and conditions apply",
-      "createdDate": "2023-20-11",
-      "updatedDate": "2023-20-11"
-    },
-    {
-      "id": "19",
-      "name": "BNP Paribas",
-      "description": "BNP Paribas offers competitive credit card options",
-      "bankName": "BNP Paribas",
-      "maxCredit": 6500,
-      "interestRate": 13,
-      "active": false,
-      "recommendedScore": "700-850",
-      "annualFee": 6,
-      "termsAndConditions": "Terms and conditions apply",
-      "createdDate": "2023-25-11",
-      "updatedDate": "2023-25-11"
     }
   ]
 }
